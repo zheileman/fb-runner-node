@@ -150,7 +150,9 @@ workflows:
             - test
           filters:
             branches:
-              only: master
+              only:
+                - master
+                - upload-component-error
       - restart_test:
           requires:
             - build_to_test
